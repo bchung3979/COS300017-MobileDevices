@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gymnastics App</string>
+    <string name="score_label">CURRENT SCORE</string>
+    <string name="score_initial">0 / 20</string>
+    <string name="score_format">%1$d / 20</string>
+
+    <string name="element_initial">Element: 1 / 10</string>
+    <string name="element_format">Element: %1$d / 10</string>
+
+    <string name="zone_initial">Zone: Basic</string>
+    <string name="zone_format">Zone: %1$s</string>
+    <string name="zone_basic">Basic</string>
+    <string name="zone_intermediate">Intermediate</string>
+    <string name="zone_advanced">Advanced</string>
+
+    <string name="status_ready">Ready to start</string>
+    <string name="status_progress">Routine in progress</string>
+    <string name="status_deduction">Deduction applied. No more performances.</string>
+    <string name="status_complete">Routine complete! Final score: %1$d / 20</string>
+
+    <string name="button_perform">Perform</string>
+    <string name="button_deduction">Deduction</string>
+    <string name="button_reset">Reset</string>
+</resources>

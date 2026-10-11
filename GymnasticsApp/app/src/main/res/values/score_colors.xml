@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="score_blue">#1565C0</color>
+    <color name="score_green">#2E7D32</color>
+    <color name="score_orange">#B45309</color>
+</resources>

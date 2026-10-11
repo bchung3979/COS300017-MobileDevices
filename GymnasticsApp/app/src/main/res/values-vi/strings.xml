@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gymnastics App</string>
+    <string name="score_label">ĐIỂM HIỆN TẠI</string>
+    <string name="score_initial">0 / 20</string>
+    <string name="score_format">%1$d / 20</string>
+
+    <string name="element_initial">Động tác: 1 / 10</string>
+    <string name="element_format">Động tác: %1$d / 10</string>
+
+    <string name="zone_initial">Độ khó: Cơ bản</string>
+    <string name="zone_format">Độ khó: %1$s</string>
+    <string name="zone_basic">Cơ bản</string>
+    <string name="zone_intermediate">Trung cấp</string>
+    <string name="zone_advanced">Nâng cao</string>
+
+    <string name="status_ready">Sẵn sàng bắt đầu</string>
+    <string name="status_progress">Đang thực hiện bài tập</string>
+    <string name="status_deduction">Đã trừ điểm. Không thể thực hiện thêm động tác.</string>
+    <string name="status_complete">Đã hoàn thành! Điểm cuối: %1$d / 20</string>
+
+    <string name="button_perform">Thực hiện</string>
+    <string name="button_deduction">Trừ điểm</string>
+    <string name="button_reset">Làm lại</string>
+</resources>

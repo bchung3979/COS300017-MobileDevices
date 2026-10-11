@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#111827"
+        android:layout_marginBottom="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_label"
+        android:textSize="16sp"
+        android:textColor="#6B7280" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/score_initial"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/elementText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/element_initial"
+        android:textSize="22sp"
+        android:textColor="#111827"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/zoneText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zone_initial"
+        android:textSize="18sp"
+        android:textColor="#374151"
+        android:layout_marginBottom="18dp" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:gravity="center"
+        android:text="@string/status_ready"
+        android:textSize="16sp"
+        android:textColor="#374151"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/performButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/button_perform" />
+
+    <Button
+        android:id="@+id/deductionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/button_deduction"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/button_reset"
+        android:layout_marginTop="8dp" />
+
+</LinearLayout>
