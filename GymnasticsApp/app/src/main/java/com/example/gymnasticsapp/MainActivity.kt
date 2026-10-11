@@ -137,6 +137,7 @@ class MainActivity : AppCompatActivity() {
 
         if (completedElements == 0 ||
             completedElements >= TOTAL_ELEMENTS ||
+            deductionTaken ||
             score == 0
         ) {
             Log.w(TAG, "Deduction blocked")
@@ -203,6 +204,7 @@ class MainActivity : AppCompatActivity() {
             !deductionTaken && completedElements < TOTAL_ELEMENTS
 
         deductionButton.isEnabled =
+            !deductionTaken &&
             completedElements in 1 until TOTAL_ELEMENTS && score > 0
 
         statusText.text = when {
