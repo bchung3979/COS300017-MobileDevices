@@ -1,0 +1,14 @@
+Car photos - Wikimedia Commons (resized to 1024 px wide). Credit each photo where it is shown (About screen or report).
+
+car_vinfast_vf5.jpg       "2025 VinFast VF 5 in Vinfast Blue, front left" by Ethan Llamas, CC BY-SA 4.0
+                          https://commons.wikimedia.org/wiki/File:2025_VinFast_VF_5_in_Vinfast_Blue,_front_left.jpg
+car_toyota_vios.jpg       "Toyota Vios XP150 Facelift Shishi 01 2022-09-20" by JamesYoung8167, CC BY-SA 4.0
+                          https://commons.wikimedia.org/wiki/File:Toyota_Vios_XP150_Facelift_Shishi_01_2022-09-20.jpg
+car_mazda3.jpg            "MAZDA3 SEDAN (BP) China" by Dinkun Chen, CC BY-SA 4.0
+                          https://commons.wikimedia.org/wiki/File:MAZDA3_SEDAN_(BP)_China.jpg
+car_mitsubishi_xpander.jpg "2022 Mitsubishi Xpander Ultimate 1.5 NC2W (20220221)" by オーバードライブ83, CC BY-SA 4.0
+                          https://commons.wikimedia.org/wiki/File:2022_Mitsubishi_Xpander_Ultimate_1.5_NC2W_(20220221).jpg
+car_toyota_fortuner.jpg   "2021 Toyota Fortuner 2.4 TRD Sportivo (Indonesia) front view" by Andra Febrian, CC BY-SA 4.0
+                          https://commons.wikimedia.org/wiki/File:2021_Toyota_Fortuner_2.4_TRD_Sportivo_(Indonesia)_front_view.jpg
+
+Licence: https://creativecommons.org/licenses/by-sa/4.0/ - photos resized only, no other changes.

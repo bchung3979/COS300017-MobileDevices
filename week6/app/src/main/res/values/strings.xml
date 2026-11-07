@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">week-6</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="submit">Submit</string>
+    <string name="your_full_name">Your full name&#8230;</string>
+    <string name="full_name_format">%1$s %2$s</string>
+</resources>

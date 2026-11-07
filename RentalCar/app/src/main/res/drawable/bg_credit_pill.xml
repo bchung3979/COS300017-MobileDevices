@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nền của ô credit: hình chữ nhật bo tròn hoàn toàn. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/fu_inverse" />
+    <corners android:radius="999dp" />
+</shape>

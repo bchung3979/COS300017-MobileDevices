@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  6 style dùng lại. Đề yêu cầu ít nhất 2 style, mỗi style dùng ở ít nhất 2 chỗ;
+  mỗi style dưới đây đều được dùng trên CẢ 2 màn hình.
+  -->
+<resources>
+
+    <!-- Chữ to đậm: "Fake Uber.", tên xe ở màn Main và màn Rent. -->
+    <style name="TextAppearance.FakeUber.Title" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/fu_text</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <!-- Tiêu đề mục: Favourites, Available now, My rentals, How many days?, Driver details, Credits. -->
+    <style name="TextAppearance.FakeUber.Section" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/fu_text</item>
+    </style>
+
+    <!-- Chữ phụ màu xám: tên hãng, "credits / day", nhãn, "Tap to upload"... -->
+    <style name="TextAppearance.FakeUber.Secondary" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/fu_text_secondary</item>
+    </style>
+
+    <!-- Ô số dư credit ở header của CẢ màn Main và Rent. -->
+    <style name="Widget.FakeUber.CreditPill" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/fu_touch_min</item>
+        <item name="android:background">@drawable/bg_credit_pill</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:textColor">@color/fu_on_inverse</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Nút hành động chính màu cam: Rent (Main) và Save (Rent). -->
+    <style name="Widget.FakeUber.Button.Primary" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/fu_button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="backgroundTint">@color/fu_accent</item>
+        <item name="android:textColor">@color/fu_on_accent</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">28dp</item>
+    </style>
+
+    <!-- Nút tối: Next (Main) và Back (Rent). Kế thừa từ Primary, chỉ đổi màu. -->
+    <style name="Widget.FakeUber.Button.Inverse" parent="Widget.FakeUber.Button.Primary">
+        <item name="backgroundTint">@color/fu_inverse</item>
+        <item name="android:textColor">@color/fu_on_inverse</item>
+        <item name="iconTint">@color/fu_on_inverse</item>
+    </style>
+
+    <!-- Thẻ bo góc phẳng: thẻ xe, đơn thuê (Main); chọn ngày, giấy tờ, credits (Rent). -->
+    <style name="Widget.FakeUber.Card" parent="Widget.Material3.CardView.Filled">
+        <item name="cardBackgroundColor">@color/fu_surface</item>
+        <item name="cardCornerRadius">@dimen/fu_card_radius</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <!-- Bo góc cho ảnh thu nhỏ (thẻ đơn thuê) -->
+    <style name="ShapeAppearance.FakeUber.Thumb" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+
+    <!-- Ảnh tròn (chip yêu thích) -->
+    <style name="ShapeAppearance.FakeUber.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

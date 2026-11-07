@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Một chip trong dải Favourites (sketch 02): ảnh tròn + tên + giá. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/bg_pill_surface"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/fu_touch_min"
+    android:orientation="horizontal"
+    android:paddingStart="6dp"
+    android:paddingTop="6dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="6dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgFav"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:importantForAccessibility="no"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.FakeUber.Circle"
+        tools:src="@drawable/car_toyota_vios" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvFavName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/fu_text"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tools:text="Vios 1.5G" />
+
+        <TextView
+            android:id="@+id/tvFavSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.FakeUber.Secondary"
+            android:textSize="13sp"
+            tools:text="80 cr/day" />
+    </LinearLayout>
+</LinearLayout>

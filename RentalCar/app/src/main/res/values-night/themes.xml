@@ -1,0 +1,6 @@
+<resources>
+    <!--
+  Cố ý để trống: dark mode chỉ đổi màu, mà màu đã nằm trong values-night/colors.xml.
+      Một theme + hai file màu dễ quản lý hơn hai bản theme giống nhau.
+  -->
+</resources>

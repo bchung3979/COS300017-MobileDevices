@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Icon mặt trời/mặt trăng + Switch sáng/tối. Dùng chung ở header của CẢ 2 màn hình
+  và do cùng một hàm Kotlin (DarkModeToggle) điều khiển.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pill_surface"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="6dp">
+
+    <ImageView
+        android:id="@+id/imgMode"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_sun" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cd_dark_mode"
+        android:minHeight="@dimen/fu_touch_min" />
+</LinearLayout>

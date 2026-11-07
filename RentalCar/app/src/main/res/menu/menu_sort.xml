@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Menu Sort hiện bằng PopupMenu dưới nút Sort (sketch 13).
+  checkableBehavior="single" = chỉ chọn được một mục tại một thời điểm.
+  -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_header"
+        android:enabled="false"
+        android:title="@string/sort_header" />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/sort_rating"
+            android:title="@string/sort_rating" />
+        <item
+            android:id="@+id/sort_year"
+            android:title="@string/sort_year" />
+        <item
+            android:id="@+id/sort_cost"
+            android:title="@string/sort_cost" />
+    </group>
+</menu>

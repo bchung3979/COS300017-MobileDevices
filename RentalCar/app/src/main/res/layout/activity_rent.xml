@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Màn Rent (sketch 05, 06, 08, 12): một cột thẻ cuộn được + thanh Back/Save cố định ở đáy.
+  CoordinatorLayout giúp Snackbar nằm ngay phía trên thanh đó.
+  -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fu_bg"
+    tools:context=".RentActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollRent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="112dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/fu_screen_padding">
+
+            <!-- ===== Header: nút back · tiêu đề · ô credit · công tắc dark mode ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnBackTop"
+                    android:layout_width="@dimen/fu_touch_min"
+                    android:layout_height="@dimen/fu_touch_min"
+                    android:background="@drawable/bg_circle_surface"
+                    android:contentDescription="@string/cd_back"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/fu_text" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:accessibilityHeading="true"
+                    android:text="@string/rent_title"
+                    android:textAppearance="@style/TextAppearance.FakeUber.Section"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tvCredits"
+                    style="@style/Widget.FakeUber.CreditPill"
+                    android:drawableStart="@drawable/bg_wallet_badge"
+                    tools:text="500 credits" />
+
+                <include
+                    android:id="@+id/darkToggle"
+                    layout="@layout/view_dark_toggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- ===== Ảnh xe ===== -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FakeUber.Card"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/imgCar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/car_vinfast_vf5" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Tên, giá, đánh giá ===== -->
+            <TextView
+                android:id="@+id/tvMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAppearance="@style/TextAppearance.FakeUber.Secondary"
+                android:textSize="15sp"
+                tools:text="VinFast · 2025 · Electric SUV" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvModel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.FakeUber.Title"
+                    tools:text="VF 5 Plus" />
+
+                <TextView
+                    android:id="@+id/tvCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/fu_text"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    tools:text="60" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="@string/cr_per_day"
+                    android:textAppearance="@style/TextAppearance.FakeUber.Secondary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RatingBar
+                    android:id="@+id/ratingBar"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:isIndicator="true"
+                    android:numStars="5"
+                    android:progressBackgroundTint="@color/fu_outline"
+                    android:progressTint="@color/fu_accent"
+                    android:secondaryProgressTint="@color/fu_accent"
+                    android:stepSize="0.5" />
+
+                <TextView
+                    android:id="@+id/tvRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/fu_text"
+                    android:textStyle="bold"
+                    tools:text="4.6" />
+
+                <TextView
+                    android:id="@+id/tvKm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:textAppearance="@style/TextAppearance.FakeUber.Secondary"
+                    tools:text="· 18,500 km" />
+            </LinearLayout>
+
+            <!-- ===== Số chỗ · Nhiên liệu · Loại xe ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <include
+                    android:id="@+id/specSeats"
+                    layout="@layout/item_spec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/specFuel"
+                    layout="@layout/item_spec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1" />
+
+                <include
+                    android:id="@+id/specType"
+                    layout="@layout/item_spec"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.2" />
+            </LinearLayout>
+
+            <!-- ===== How many days? (Slider = widget không phải TextView) ===== -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FakeUber.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fu_card_padding">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:accessibilityHeading="true"
+                            android:text="@string/days_title"
+                            android:textAppearance="@style/TextAppearance.FakeUber.Section" />
+
+                        <TextView
+                            android:id="@+id/tvDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/fu_text"
+                            android:textSize="26sp"
+                            android:textStyle="bold"
+                            tools:text="3" />
+
+                        <TextView
+                            android:id="@+id/tvDaysUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginBottom="3dp"
+                            android:textAppearance="@style/TextAppearance.FakeUber.Secondary"
+                            android:textSize="16sp"
+                            tools:text="days" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/days_sub"
+                        android:textAppearance="@style/TextAppearance.FakeUber.Secondary" />
+
+                    <com.google.android.material.slider.Slider
+                        android:id="@+id/sliderDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:contentDescription="@string/cd_days_slider"
+                        android:stepSize="1"
+                        android:value="1"
+                        android:valueFrom="1"
+                        android:valueTo="7"
+                        app:labelBehavior="gone"
+                        app:tickColorActive="@color/fu_on_accent"
+                        app:tickColorInactive="@color/fu_text_secondary"
+                        app:trackColorInactive="@color/fu_surface_variant" />
+
+                    <!-- Các số 1..7 dưới Slider, được tạo trong Kotlin -->
+                    <LinearLayout
+                        android:id="@+id/layoutDayLabels"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:importantForAccessibility="noHideDescendants"
+                        android:orientation="horizontal"
+                        android:paddingStart="6dp"
+                        android:paddingEnd="6dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Driver details: 2 ô ảnh giấy tờ ===== -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FakeUber.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fu_card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/driver_details"
+                        android:textAppearance="@style/TextAppearance.FakeUber.Section" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/tileId"
+                            layout="@layout/item_doc_tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
+                            android:layout_weight="1" />
+
+                        <include
+                            android:id="@+id/tileLicence"
+                            layout="@layout/item_doc_tile"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== Thẻ Credits ===== -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.FakeUber.Card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fu_card_padding">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="6dp"
+                        android:accessibilityHeading="true"
+                        android:text="@string/credits_title"
+                        android:textAppearance="@style/TextAppearance.FakeUber.Section" />
+
+                    <include
+                        android:id="@+id/rowCost"
+                        layout="@layout/item_credit_row" />
+
+                    <include
+                        android:id="@+id/rowBalance"
+                        layout="@layout/item_credit_row" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:importantForAccessibility="no"
+                        android:layerType="software"
+                        android:src="@drawable/divider_dashed" />
+
+                    <include
+                        android:id="@+id/rowAfter"
+                        layout="@layout/item_credit_row" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/rental_limit"
+                            android:textAppearance="@style/TextAppearance.FakeUber.Secondary"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tvLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TextAppearance.FakeUber.Secondary"
+                            android:textSize="13sp"
+                            tools:text="180 / 400 cr" />
+                    </LinearLayout>
+
+                    <!-- Thanh "đơn này dùng bao nhiêu trong hạn mức 400", chuyển đỏ khi vượt 400 -->
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:max="400"
+                        app:trackColor="@color/fu_surface_variant"
+                        app:trackCornerRadius="4dp"
+                        app:trackThickness="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:accessibilityLiveRegion="polite"
+                        android:background="@drawable/bg_error_box"
+                        android:drawableStart="@drawable/ic_error"
+                        android:drawablePadding="10dp"
+                        android:padding="14dp"
+                        android:textColor="@color/fu_error"
+                        android:textSize="15sp"
+                        android:visibility="gone"
+                        tools:text="Not enough credits..."
+                        tools:visibility="visible" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- ===== Thanh cố định ở đáy: Back (= huỷ) · Save ===== -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_bottom_bar"
+        android:elevation="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="6dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.FakeUber.Button.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="@string/back" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/Widget.FakeUber.Button.Primary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Save · 180 credits" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

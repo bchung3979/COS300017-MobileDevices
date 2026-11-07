@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name">Fake Uber</string>
+
+    <!-- Header -->
+    <string name="logo_main">Fake Uber</string>
+    <string name="logo_dot">.</string>
+    <string name="credits_pill">%1$d credits</string>
+    <string name="cd_dark_mode">Dark mode</string>
+
+    <!-- Màn Main -->
+    <string name="headline_start">Pick a car,</string>
+    <string name="headline_accent">drive today.</string>
+    <string name="headline_sub">Instant pick-up. Rent up to 7 days with your credits.</string>
+    <string name="search_hint">Search name or model</string>
+    <string name="sort">Sort</string>
+    <string name="favourites">Favourites</string>
+    <string name="favourites_count">%1$d saved</string>
+    <string name="favourites_empty">Tap ♡ or long-press a car photo to save it here.</string>
+    <string name="available_now">Available now</string>
+    <string name="position">%1$d / %2$d</string>
+    <string name="credits_per_day">credits / day</string>
+    <string name="out_of_five">/ 5</string>
+    <string name="stat_year">Year</string>
+    <string name="stat_km">Kilometres</string>
+    <string name="stat_cost">Daily cost</string>
+    <string name="km_value">%1$s km</string>
+    <string name="cr_value">%1$d cr</string>
+    <string name="rent">Rent</string>
+    <string name="next">Next</string>
+    <string name="my_rentals">My rentals</string>
+    <string name="rentals_empty">No active rentals yet. Cars you rent will show up here.</string>
+
+    <!-- Nhãn accessibility (TalkBack đọc) -->
+    <string name="cd_car_photo">Photo of %1$s</string>
+    <string name="cd_add_favourite">Add %1$s to favourites</string>
+    <string name="cd_remove_favourite">Remove %1$s from favourites</string>
+    <!-- Màn Rent -->
+    <string name="rent_title">Rent</string>
+    <string name="cd_back">Back to cars, cancel this rental</string>
+    <string name="rent_meta">%1$s · %2$d · %3$s</string>
+    <string name="cr_per_day">cr/day</string>
+    <string name="dot_km">· %1$s km</string>
+    <string name="spec_seats">Seats</string>
+    <string name="spec_fuel">Fuel</string>
+    <string name="spec_type">Type</string>
+    <string name="days_title">How many days?</string>
+    <string name="days_sub">Pick-up is right now. Return within a week.</string>
+    <string name="cd_days_slider">Number of rental days, 1 to 7</string>
+    <plurals name="days_unit">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+    <string name="driver_details">Driver details</string>
+    <string name="doc_id">Driver ID Photo</string>
+    <string name="doc_licence">Driver Licence Photo</string>
+    <string name="doc_tap_upload">Tap to upload</string>
+    <string name="doc_tap_change">Tap to change</string>
+    <string name="doc_required">Required</string>
+    <string name="cd_doc_id">Upload driver ID photo</string>
+    <string name="cd_doc_licence">Upload driver licence photo</string>
+    <string name="cd_doc_added">%1$s added. Tap to change it.</string>
+    <string name="credits_title">Credits</string>
+    <string name="cost_times_days">%1$d cr × %2$d %3$s</string>
+    <string name="your_balance">Your balance</string>
+    <string name="balance_after">Balance after rental</string>
+    <string name="rental_limit">Rental limit</string>
+    <string name="limit_value">%1$d / %2$d cr</string>
+    <string name="error_over_limit">This rental costs %1$d credits. One rental can\'t go over %2$d. Pick fewer days or press Back to cancel.</string>
+    <string name="error_not_enough">Not enough credits. You have %1$d, this rental needs %2$d. Pick fewer days or press Back to cancel.</string>
+    <string name="back">Back</string>
+    <string name="save_total">Save · %1$d credits</string>
+
+    <!-- Snackbar: tiêu đề in đậm + một dòng chi tiết -->
+    <string name="snack_cant_save_title">Can\'t save yet</string>
+    <string name="snack_cant_save_msg">Fix the highlighted items, or press Back to cancel.</string>
+    <string name="snack_booked_title">%1$s booked</string>
+    <string name="snack_booked_msg">%1$d %2$s · %3$d credits. Pick it up now.</string>
+    <string name="snack_not_saved_title">Rental not saved</string>
+    <string name="this_car">The car</string>
+    <string name="snack_not_saved_msg">%1$s was not rented. No credits used.</string>
+
+    <!-- Sắp xếp, yêu thích, trạng thái trống, đơn thuê -->
+    <string name="cd_sort">Sort cars</string>
+    <string name="sort_header">Sort by</string>
+    <string name="sort_rating">Rating · high to low</string>
+    <string name="sort_year">Year · newest first</string>
+    <string name="sort_cost">Cost · lowest first</string>
+    <string name="fav_chip_price">%1$d cr/day</string>
+    <string name="fav_chip_rented">Rented</string>
+    <string name="cd_fav_chip">%1$s, favourite. Tap to show it.</string>
+    <string name="cd_long_press_favourite">add or remove favourite</string>
+    <string name="snack_fav_rented_title">%1$s is rented</string>
+    <string name="snack_fav_rented_msg">Cancel the booking in My rentals to see it again.</string>
+    <string name="no_match_title">No cars match “%1$s”</string>
+    <string name="no_match_sub">Try a different name or model.</string>
+    <string name="clear_search">Clear search</string>
+    <string name="all_rented_title">All cars are rented</string>
+    <string name="all_rented_sub">Cancel a booking below to make a car available again.</string>
+    <string name="rental_status">RENTED · PICK UP NOW</string>
+    <string name="rental_detail">%1$d %2$s · %3$d credits · ID checked</string>
+    <string name="cancel_booking">Cancel booking</string>
+    <string name="cd_cancel_booking">Cancel booking for %1$s</string>
+    <string name="snack_cancelled_title">Booking cancelled · %1$d credits refunded</string>
+    <string name="snack_cancelled_msg">%1$s is back in the list.</string>
+</resources>

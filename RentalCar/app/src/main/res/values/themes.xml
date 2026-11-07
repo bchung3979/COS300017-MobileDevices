@@ -1,0 +1,37 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+  Theme của app. DayNight = theo chế độ sáng/tối của AppCompatDelegate: chế độ sáng đọc
+      values/colors.xml, chế độ tối đọc values-night/colors.xml.
+      Gán bảng màu vào các vai trò màu của Material 3 để Slider, Switch, ProgressIndicator,
+      Snackbar và các nút tự lấy đúng màu mà không phải style từng cái.
+  -->
+    <style name="Base.Theme.FakeUber" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/fu_accent</item>
+        <item name="colorOnPrimary">@color/fu_on_accent</item>
+        <item name="colorPrimaryContainer">@color/fu_accent</item>
+        <item name="colorOnPrimaryContainer">@color/fu_on_accent</item>
+        <item name="colorSecondary">@color/fu_inverse</item>
+        <item name="colorOnSecondary">@color/fu_on_inverse</item>
+        <!-- Màu phần chưa kéo của Slider (nếu thiếu sẽ ra màu tím mặc định của Material) -->
+        <item name="colorSecondaryContainer">@color/fu_surface_variant</item>
+        <item name="colorOnSecondaryContainer">@color/fu_text</item>
+
+        <item name="android:colorBackground">@color/fu_bg</item>
+        <item name="colorOnBackground">@color/fu_text</item>
+        <item name="colorSurface">@color/fu_surface</item>
+        <item name="colorOnSurface">@color/fu_text</item>
+        <item name="colorSurfaceVariant">@color/fu_surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/fu_text_secondary</item>
+        <item name="colorOutline">@color/fu_outline</item>
+
+        <!-- Snackbar dùng màu đảo -->
+        <item name="colorSurfaceInverse">@color/fu_inverse</item>
+        <item name="colorOnSurfaceInverse">@color/fu_on_inverse</item>
+        <item name="colorPrimaryInverse">@color/fu_accent</item>
+
+        <item name="colorError">@color/fu_error</item>
+        <item name="android:windowBackground">@color/fu_bg</item>
+    </style>
+
+    <style name="Theme.FakeUber" parent="Base.Theme.FakeUber" />
+</resources>

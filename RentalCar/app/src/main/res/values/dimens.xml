@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fu_screen_padding">20dp</dimen>
+    <dimen name="fu_gap">12dp</dimen>
+    <dimen name="fu_section_gap">28dp</dimen>
+    <dimen name="fu_card_radius">24dp</dimen>
+    <dimen name="fu_card_padding">18dp</dimen>
+    <dimen name="fu_button_height">56dp</dimen>
+    <!-- Accessibility: mọi thứ bấm được tối thiểu 48dp -->
+    <dimen name="fu_touch_min">48dp</dimen>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Bảng màu tối (sketch 10, 11). Tên màu giống hệt values/colors.xml. -->
+<resources>
+    <color name="fu_bg">#0D0F13</color>
+    <color name="fu_surface">#171A1E</color>
+    <color name="fu_surface_variant">#22272A</color>
+    <color name="fu_outline">#33393F</color>
+
+    <color name="fu_text">#F5F3EF</color>
+    <color name="fu_text_secondary">#B5AFA7</color>
+
+    <color name="fu_inverse">#F5F3EF</color>
+    <color name="fu_on_inverse">#12161B</color>
+
+    <color name="fu_accent">#F97316</color>          <!-- sáng hơn một chút trên nền tối -->
+    <color name="fu_on_accent">#12161B</color>
+    <color name="fu_accent_text">#FB923C</color>
+    <color name="fu_accent_soft">#3A2414</color>
+
+    <color name="fu_success">#4ADE80</color>         <!-- #1F7A45 quá tối trên nền đen -->
+    <color name="fu_error">#F87171</color>
+    <color name="fu_error_container">#3B1517</color>
+</resources>

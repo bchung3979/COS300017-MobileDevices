@@ -1,0 +1,6 @@
+Fake Uber - Accessibility notes (handle at code time)
+1. Touch targets: every tappable element >= 48x48dp (icon buttons, theme toggle, heart, clear search, slider thumb, sort rows).
+2. Orange contrast: text on orange buttons and orange text on light backgrounds must reach 4.5:1 (darken orange for text, or use dark text on orange).
+3. Secondary text: grey helper text (e.g. "Tap to upload", "credits / day") must reach 4.5:1 in both light and dark themes.
+4. Document tiles: contentDescription "Upload driver ID photo" / "Upload driver licence photo".
+5. Notifications: use Snackbar at the bottom (Text Toast cannot be positioned at the top since Android 11).
