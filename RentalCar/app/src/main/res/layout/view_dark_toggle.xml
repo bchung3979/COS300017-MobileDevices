@@ -24,5 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/cd_dark_mode"
-        android:minHeight="@dimen/fu_touch_min" />
+        android:minHeight="@dimen/fu_touch_min"
+        android:saveEnabled="false" />
+    <!-- saveEnabled="false": không cho Android tự khôi phục trạng thái cũ của Switch khi tạo lại
+         Activity, trạng thái luôn lấy từ chế độ sáng/tối hiện tại (DarkModeToggle.bind). -->
 </LinearLayout>

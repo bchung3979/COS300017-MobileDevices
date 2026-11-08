@@ -24,6 +24,10 @@ object DarkModeToggle {
         toggle.imgMode.setImageResource(if (isNight) R.drawable.ic_moon else R.drawable.ic_sun)
 
         toggle.switchDark.setOnCheckedChangeListener { _, checked ->
+            // Chỉ đổi chế độ khi công tắc thật sự khác chế độ đang hiển thị.
+            // Chặn trường hợp Android khôi phục trạng thái cũ của Switch rồi bắn listener
+            // (lỗi lặp sáng/tối khi đổi chế độ ở màn Rent, xem DEVLOG #24).
+            if (checked == isNight) return@setOnCheckedChangeListener
             AppCompatDelegate.setDefaultNightMode(
                 if (checked) AppCompatDelegate.MODE_NIGHT_YES else AppCompatDelegate.MODE_NIGHT_NO
             )

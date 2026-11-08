@@ -19,7 +19,7 @@ Format: **Problem → Cause → Fix → Takeaway**.
 | 07/11 22:37 | Stage 3: Home screen + MainViewModel + dark-mode toggle |
 | 08/11 00:00 | Stage 4: Rent screen, Intent + Parcelable, Activity Result API, validation, Photo Picker |
 | 08/11 00:18 | Stage 5: favourites, search, sort, My rentals + cancel booking; manual test of all features passed |
-| 08/11 00:49–01:10 | Stage 6: Espresso tests (10), debugging 2 test failures |
+| 08/11 00:49–01:09 | Stage 6: Espresso tests (10). First run: 9/10 passed in 8 min 5 s. After fixes #20–#22: **10/10 passed in 43 s** |
 
 ---
 
@@ -128,6 +128,17 @@ Format: **Problem → Cause → Fix → Takeaway**.
 ### 16. Emulator has no photos to pick
 - **Problem:** the Photo Picker opened an empty gallery.
 - **Fix:** drag-and-drop image files onto the emulator window to add them.
+
+### 24. Switching to light mode on the Rent screen made the screen flicker forever
+- **Problem:** in dark mode, opening Rent and switching to light made the screen flash black/dark in an endless loop (found while taking report screenshots).
+- **Cause:**
+  - `setDefaultNightMode()` recreates **both** Activities: Rent on screen and Main in the back stack.
+  - When an Activity is recreated, Android restores each view's saved state *after* `onCreate()`. That includes the Switch's old checked value, and our listener was already attached.
+  - Main restored "dark = on", which switched the app back to dark. Rent then restored "dark = off", which switched it to light again. The two screens kept flipping each other.
+- **Fix (two layers):**
+  - `android:saveEnabled="false"` on the Switch, so it never restores a stale value.
+  - The listener only acts when the new value differs from the mode currently shown.
+- **Takeaway:** view state restoration happens after `onCreate()`. Any listener attached in `onCreate()` can fire with old values, so global side effects (like changing the night mode) need a guard.
 
 ---
 
